@@ -9,9 +9,9 @@ use Faker;
 class IdeasController extends AbstractController
 {
     /**
-     * @Route("/api/ideas", name="ideas", methods="GET")
+     * @Route("/api/ideas", name="ideas_index", methods="GET")
      */
-    public function index()
+    public function ideasIndex()
     {
         $faker = Faker\Factory::create('fr_FR');
 
