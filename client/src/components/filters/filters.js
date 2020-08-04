@@ -25,7 +25,7 @@ export default function Filters(props) {
 
 
             <div className="col-4">
-                <input className="form-control" style={{float: 'right'}} onChange={searchChange} />
+                <input className="form-control" placeholder="Search" style={{float: 'right'}} onChange={searchChange} />
             </div>
         </>
     )

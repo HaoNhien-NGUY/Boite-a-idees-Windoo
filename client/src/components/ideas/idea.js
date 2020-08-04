@@ -3,7 +3,7 @@ import './idea.css';
 
 export default function Idea(props) {
 
-    const { id, title, createdAt, author, score } = props.idea;
+    const { title, createdAt, author, score } = props.idea;
 
     return (
         <div className="idea card border-light mb-3 shadow-sm" style={{ maxWidth: "20rem" }}>

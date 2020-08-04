@@ -20,23 +20,15 @@ function App() {
   }
 
   function sortScore ($order) {
-    if($order === 1) {
-      const sorted = ideas.slice(0).sort((a, b) => a.score  - b.score );
-      setIdeas(sorted);
-    } else {
-      const sorted = ideas.slice(0).sort((a, b) => b.score - a.score);
-      setIdeas(sorted);
-    }
+    const sorted = $order === 1 ? ideas.slice().sort((a, b) => a.score  - b.score ) : ideas.slice(0).sort((a, b) => b.score - a.score);
+    setIdeas(sorted);
   }
 
   function sortDate ($order) {
-    if($order === 1) {
-      const sorted = ideas.slice(0).sort((a, b) => new Date(a.createdAt).getTime()  - new Date(b.createdAt).getTime() );
-      setIdeas(sorted);
-    } else {
-      const sorted = ideas.slice(0).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() );
-      setIdeas(sorted);
-    }
+    const sorted = $order === 1 
+        ? ideas.slice().sort((a, b) => new Date(a.createdAt).getTime()  - new Date(b.createdAt).getTime()) 
+        : ideas.slice(0).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+    setIdeas(sorted);
   }
 
   return (
